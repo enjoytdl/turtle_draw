@@ -7,7 +7,7 @@ def array_pic(pic):
     edges = cv2.Canny(image,100,200)
     img_gray = cv2.cvtColor(edges,cv2.COLOR_BAYER_BG2GRAY)
     ret, thresh = cv2.threshold(img_gray,127,255,0)
-    image,contours,hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+    contours,hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
     xy = []
     for i in range(0,len(contours)):
         x,y,w,h = cv2.boundingRect(contours[i])
