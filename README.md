@@ -1,3 +1,15 @@
+可能报错的地方以及解决方案
+
+旧版OpenCV：返回三个参数
+
+image, contours, hierarchy = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+1
+新版OpenCV：返回两个参数
+
+contours,hierarchy = cv2.findContours(thresh,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+
+
+
 # turtle_draw
 
 python将图片进行边缘检测和轮廓提取进行turtle绘画
